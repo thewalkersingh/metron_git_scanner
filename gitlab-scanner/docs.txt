@@ -1,0 +1,34 @@
+CREATE DATABASE IF NOT EXISTS gitlab_scanner CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+# 1. Start MySQL (ensure it's running on localhost:3306)
+
+# 2. Backend
+cd backend
+mvn spring-boot:run
+
+# 3. Frontend (new terminal)
+cd frontend
+npm install
+npm run dev
+
+# 4. CLI (new terminal, after backend is up)
+cd cli
+javac -cp ".:jackson-*.jar" src/main/java/com/scanner/cli/CliRunner.java
+java com.scanner.cli.CliRunner
+
+
+
+1. private rep
+2. scan files for password.
+
+thewalkersingh
+
+pat token:
+glpat-xMoQ9qn1kpnwEJZaFgHJtGM6MQpvOjEKdTpvcTU1cg8.01.170vv85sw
+
+// sort also
+
+keys to test:
+DB_PASSWORD="supersecret123"
+AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+JWT_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PljQ
